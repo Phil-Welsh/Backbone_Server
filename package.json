@@ -1,0 +1,27 @@
+{
+  "name": "backbone_server",
+  "version": "1.0.0",
+  "description": "The Backbone application displays a map of crowdsourced internet speeds. The data is crowdsourced by users at cafes, coffeeshops, libraries, etc.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": "git+https://github.com/Phil-Welsh/Backbone_Server.git",
+  "keywords": [],
+  "author": "Phil-Welsh <pwelsh8@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.13",
+    "react-router-dom": "^6.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "bugs": {
+    "url": "https://github.com/Phil-Welsh/Backbone_Server/issues"
+  },
+  "homepage": "https://github.com/Phil-Welsh/Backbone_Server#readme"
+}
