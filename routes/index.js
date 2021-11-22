@@ -1,3 +1,3 @@
 module.exports = {
-  games: require('./gamesRoutes'),
+  places: require('./placesRoutes'),
 };

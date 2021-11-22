@@ -1,3 +1,3 @@
 module.exports = {
-  games: require('./gamesController'),
+  places: require('./placesController'),
 };

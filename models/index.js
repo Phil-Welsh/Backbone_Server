@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/gamelib';
+const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/backbone';
 
 const configOptions = {
   useNewUrlParser: true,
@@ -14,5 +14,5 @@ mongoose.connect(connectionString, configOptions)
   .catch((err) => console.log(`MongoDB connection error: ${err}`));
 
 module.exports = {
-  Game: require('./Game'),
+  Place: require('./Place'),
 };
