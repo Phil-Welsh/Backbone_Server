@@ -5,7 +5,8 @@ const PlaceSchema = new Schema({
   name: String,
   city: String,
   address: String,
-  latlong: String,
+  latitude: String,
+  longitude: String,
   type: String
 });
 
