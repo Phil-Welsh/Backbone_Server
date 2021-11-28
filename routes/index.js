@@ -1,4 +1,5 @@
 module.exports = {
   places: require('./placesRoutes'),
-  speedtests: require('./speedtestsRoutes')
+  speedtests: require('./speedtestsRoutes'),
+  users: require('./usersRoutes')
 };
