@@ -6,6 +6,7 @@ module.exports = async (req, res, next) => {
         const token = req.headers["authorization"];
         const payload = await jwt.verify(token, "supersecretwaffels");
         req.currentUser = payload._id;
+        next();
     } else {
         res.sendStatus(403);
     }
