@@ -12,5 +12,6 @@ app.use(express.json());
 
 app.use('/api/v1/places', routes.places);
 app.use('/api/v1/speedtests', routes.speedtests);
+app.use('/api/v1/', routes.users);
 
 app.listen(port, () => console.log(`Server is running on port ${port}`));

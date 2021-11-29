@@ -1,4 +1,5 @@
 module.exports = {
   places: require('./placesController'),
-  speedtests: require('./speedtestsController')
+  speedtests: require('./speedtestsController'),
+  users: require('./usersController')
 };
