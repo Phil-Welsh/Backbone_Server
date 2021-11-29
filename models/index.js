@@ -4,9 +4,9 @@ const connectionString = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/b
 
 const configOptions = {
   useNewUrlParser: true,
-  useCreateIndex: true,
+  // useCreateIndex: true,
   useUnifiedTopology: true,
-  useFindAndModify: false,
+  // useFindAndModify: false,
 };
 
 mongoose.connect(connectionString, configOptions)
