@@ -4,7 +4,7 @@ const index = (req, res) => {
     db.Place.find({}, (err, foundPlaces) => {
         if (err) console.log('Error in places#index:', err)
 
-        if(!foundPlaces) return res.json({
+        if (!foundPlaces) return res.json({
             message: 'No Places found in database.'
         })
 
@@ -17,7 +17,7 @@ const show = (req, res) => {
         if (err) {
             console.log('Error in places#show:', err);
 
-            if(!foundPlace) return res.json({
+            if (!foundPlace) return res.json({
                 message: 'There is no Place with this ID in the db.'
             })
 
@@ -39,7 +39,7 @@ const create = (req, res) => {
 }
 
 const update = (req, res) => {
-    db.Place.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedPlace) => {
+    db.Place.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPlace) => {
         if (err) {
             console.log('Error in places#update:', err)
 
@@ -54,17 +54,17 @@ const update = (req, res) => {
 
 const destroy = (req, res) => {
     db.Place.findByIdAndDelete(req.params.id, (err, deletedPlace) => {
-      if (err) {
-        console.log('Error in places#destroy:', err)
+        if (err) {
+            console.log('Error in places#destroy:', err)
 
-        return res.send("Incomplete places#destroy controller function");
-      }
-
-      res.status(200).json(
-        {
-          deletedPlace
+            return res.send("Incomplete places#destroy controller function");
         }
-      );
+
+        res.status(200).json(
+            {
+                deletedPlace
+            }
+        );
     });
 };
 
