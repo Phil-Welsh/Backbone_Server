@@ -21,7 +21,8 @@ const SpeedtestSchema = new Schema({
     upload: Number,
     latency: Number,
     jitter: Number,
-    testId: String
+    testId: String,
+// TODO - ADD PLACE ID FIELD
 });
 
 const Speedtest = mongoose.model('Speedtest', SpeedtestSchema);
