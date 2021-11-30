@@ -13,7 +13,7 @@ const index = (req, res) => {
         })
 
         res.status(200).json({ comments: foundComments });
-    })
+    }).populate("user")
 }
 
 const show = (req, res) => {
