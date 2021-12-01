@@ -7,7 +7,8 @@ const PlaceSchema = new Schema({
   address: String,
   latitude: String,
   longitude: String,
-  type: String
+  type: String,
+  ipAddress: String
 });
 
 const Place = mongoose.model('Place', PlaceSchema);

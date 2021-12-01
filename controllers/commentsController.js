@@ -1,5 +1,4 @@
 const db = require('../models');
-const ObjectId = require('mongodb').ObjectId;
 
 const index = (req, res) => {
 
@@ -29,9 +28,9 @@ const show = (req, res) => {
         }
 
         res.status(200).json({
-            place: foundComment
+            comment: foundComment
         });
-    });
+    }).populate("place")
 };
 
 const create = (req, res) => {
