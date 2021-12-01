@@ -16,5 +16,6 @@ mongoose.connect(connectionString, configOptions)
 module.exports = {
   Place: require('./Place'),
   Speedtest: require('./Speedtest'),
-  User: require('./User')
+  User: require('./User'),
+  Comment: require('./Comment')
 };

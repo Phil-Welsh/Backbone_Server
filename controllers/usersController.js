@@ -48,7 +48,7 @@ const login = async (req, res) => {
                 { _id: foundUser._id },
                 "supersecretwaffels",
                 {
-                    expiresIn: "1h",
+                    expiresIn: "12h",
                 }
             );
             res.status(200).json({

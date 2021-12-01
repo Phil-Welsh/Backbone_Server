@@ -4,7 +4,7 @@ const index = (req, res) => {
     db.Speedtest.find({}, (err, foundSpeedtests) => {
         if (err) console.log('Error in speedtests#index:', err)
 
-        if(!foundSpeedtests) return res.json({
+        if (!foundSpeedtests) return res.json({
             message: 'No Speedtests found in database.'
         })
 
@@ -17,7 +17,7 @@ const show = (req, res) => {
         if (err) {
             console.log('Error in speedtests#show:', err);
 
-            if(!foundSpeedtest) return res.json({
+            if (!foundSpeedtest) return res.json({
                 message: 'There is no Speedtest with this ID in the db.'
             })
 
@@ -39,7 +39,7 @@ const create = (req, res) => {
 }
 
 const update = (req, res) => {
-    db.Speedtest.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedSpeedtest) => {
+    db.Speedtest.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedSpeedtest) => {
         if (err) {
             console.log('Error in speedtests#update:', err)
 
@@ -54,17 +54,17 @@ const update = (req, res) => {
 
 const destroy = (req, res) => {
     db.Speedtest.findByIdAndDelete(req.params.id, (err, deletedSpeedtest) => {
-      if (err) {
-        console.log('Error in speedtests#destroy:', err)
+        if (err) {
+            console.log('Error in speedtests#destroy:', err)
 
-        return res.send("Incomplete speedtests#destroy controller function");
-      }
-
-      res.status(200).json(
-        {
-          deletedSpeedtest
+            return res.send("Incomplete speedtests#destroy controller function");
         }
-      );
+
+        res.status(200).json(
+            {
+                deletedSpeedtest
+            }
+        );
     });
 };
 
