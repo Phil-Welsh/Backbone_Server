@@ -1,7 +1,10 @@
 const db = require('../models');
 
 const index = (req, res) => {
-    db.Speedtest.find({}, (err, foundSpeedtests) => {
+
+    const placeid = req.headers["placeid"]
+
+    db.Speedtest.find( { place: placeid }, (err, foundSpeedtests) => {
         if (err) console.log('Error in speedtests#index:', err)
 
         if (!foundSpeedtests) return res.json({
