@@ -9,20 +9,15 @@ const SpeedtestSchema = new Schema({
     city: String,
     latitude: String,
     longitude: String,
-    serverName: String,
-    serverSponsor: String,
-    browserName: String,
-    browserVersion: String,
-    userAgent: String,
-    ispName: String,
-    ispNameRaw: String,
-    OS: String,
     download: Number,
     upload: Number,
     latency: Number,
     jitter: Number,
     testId: String,
-// TODO - ADD PLACE ID FIELD
+    place: {
+        type: mongoose.Types.ObjectId,
+        ref: "Place",
+    },
 });
 
 const Speedtest = mongoose.model('Speedtest', SpeedtestSchema);

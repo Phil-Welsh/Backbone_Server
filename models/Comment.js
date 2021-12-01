@@ -11,8 +11,11 @@ const CommentSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: "Place",
     }
-    // timestamps: { createdAt: 'created_at' }
-});
+},
+    {
+        timestamps: true,
+    }
+);
 
 const Comment = mongoose.model('Comment', CommentSchema);
 
