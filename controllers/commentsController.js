@@ -29,7 +29,7 @@ const show = (req, res) => {
         }
 
         res.status(200).json({
-            place: foundComment
+            comment: foundComment
         });
     });
 };
