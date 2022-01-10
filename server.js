@@ -10,6 +10,7 @@ app.use(cors());
 
 app.use(express.json());
 
+// Routes
 app.use('/api/v1/places', routes.places);
 app.use('/api/v1/speedtests', routes.speedtests);
 app.use('/api/v1/', routes.users);
